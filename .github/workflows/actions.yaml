@@ -1,3 +1,34 @@
+# # Event name
+# name: on_push
+# # when the event should run
+
+# on:
+#   push:
+#     branch:
+#       - "**" # This will run on all branches and must be quoted to be handled by yaml
+
+
+# # What jobs to execute
+# jobs:
+#   build_and_test:
+#     runs-on: ubuntu-latest
+#     # env: 
+#     #   RUNNER_OS: true
+#     #   HEADLESS_CHROME: true
+    
+#     steps:
+#       - uses: actions/checkout@v2
+# # install Java
+#       - uses: actions/setup-java@2
+#         with:
+#           distribution: 'zulu'
+#           java-version: 16
+#       # Run mvn test
+#       -name: Run tests with Maven
+#         working-directory: webdriver_java 
+#         run: mvn test
+#   # handle remote server chromedriver
+
 # Event name
 name: on_push
 # when the event should run
@@ -12,19 +43,7 @@ on:
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
-    # env: 
-    #   RUNNER_OS: true
-    #   HEADLESS_CHROME: true
-    
+
     steps:
       - uses: actions/checkout@v2
-# install Java
-      - uses: actions/setup-java@2
-        with:
-          distribution: 'zulu'
-          java-version: 16
-      # Run mvn test
-      -name: Run tests with Maven
-        working-directory: webdriver_java 
-        run: mvn test
-  # handle remote server chromedriver
+# What jobs are within each job

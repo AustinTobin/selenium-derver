@@ -44,8 +44,8 @@ jobs:
   build_and_test:
     runs-on: ubuntu-latest
       env: 
-        RUNNER_OS: true
-        # HEADLESS_CHROME: true
+        # RUNNER_OS: true
+        HEADLESS_CHROME: true
 
     steps:
       - uses: actions/checkout@v2

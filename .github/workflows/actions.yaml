@@ -30,5 +30,4 @@ jobs:
         run: |
           echo "TOTAL_DURATION=$(expr $(date +%s) - ${START_TIME})"
           # Run the script to extract test results
-          ./resources/test_result_script.sh
-#add a comment
+          ./webdriver_java/resources/test_result_script.sh

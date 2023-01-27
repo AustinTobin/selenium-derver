@@ -1,4 +1,4 @@
-version: 3
+version: '3'
 
 services:
   prometheus:
@@ -7,6 +7,8 @@ services:
       - 9090
     ports:
       - 9090:9090
+    volumes:
+      - ./prometheus:/etc/prometheus
   pushgateway:
     image: poom/pushgateway
     expose:

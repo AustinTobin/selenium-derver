@@ -10,7 +10,7 @@ services:
     volumes:
       - ./prometheus:/etc/prometheus
   pushgateway:
-    image: poom/pushgateway
+    image: prom/pushgateway
     expose:
       - 9091
     ports:
